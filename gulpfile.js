@@ -49,8 +49,8 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
-    .pipe(scss({outputStyle:'compressed'}))
+    return src('app/scss/**/*.scss')
+    .pipe(scss({outputStyle:'expanded'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
         overrideBrowserslist: ['last 10 version'],
